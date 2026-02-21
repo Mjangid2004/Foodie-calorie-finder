@@ -1,2 +1,2 @@
 # Foodie-calorie-finder
-“Django project to find food calories”
+Django project to find calories in your food
