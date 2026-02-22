@@ -44,7 +44,7 @@ Brisk Walk
 
 High Sodium (> 200 mg)
 
-High Sugar (> 300 mg)
+High Sugar (> 15 mg)
 
 🌙 Dark Mode toggle
 
