@@ -1,71 +1,111 @@
-# Foodie Calorie Finder
+🍎 Foodie Calorie Finder
 
-**Foodie Calorie Finder** is a Django-based web application that allows users to search for food items and see their nutritional information and estimated calories burned for different exercises. This project uses a local CSV file (`clean_food_database.csv`) as the data source, so it works offline without needing any API keys.  
+Foodie Calorie Finder is a Django-based web application that allows users to search for food items and view detailed nutritional information along with estimated calorie burn times for different exercises.
 
-### Features
-- Search for food items by name.
-- Display calories and nutritional values (protein, fat, carbs, fiber, sugar, sodium, potassium, cholesterol) per 100g.
-- Show estimated time to burn calories via:
-  - Jog
-  - Power Yoga
-  - Gym Workout
-  - Brisk Walk
-- Includes static images for calorie burn estimation and UI enhancements.
-- Fully offline using a clean CSV dataset.
+The project works completely offline using a local CSV dataset — no API keys required.
 
----
+✨ Features
 
-# Run the Project Locally
+🔎 Search food items (case-insensitive)
 
-Follow these steps to run the project on your machine:
+🥗 Displays nutrition per 100g:
 
-# 1. Clone the repository
- bash
+Calories
+
+Protein
+
+Fat
+
+Carbohydrates
+
+Fiber
+
+Sugar
+
+Sodium
+
+Potassium
+
+Cholesterol
+
+📊 Interactive nutrient Bar Graph (Chart.js)
+
+🔥 Estimated calorie burn time for:
+
+Jog
+
+Power Yoga
+
+Gym Workout
+
+Brisk Walk
+
+⚠️ Health Alerts:
+
+High Sodium (> 200 mg)
+
+High Sugar (> 300 mg)
+
+🌙 Dark Mode toggle
+
+🎨 Smooth animations & improved UI
+
+🖼 Static exercise images included
+
+💻 Fully offline (CSV-based dataset)
+
+🛠 Tech Stack
+
+Backend: Django
+
+Frontend: HTML, CSS, JavaScript
+
+Charts: Chart.js (CDN)
+
+Data Handling: Pandas
+
+Database: CSV file
+
+🚀 Run Locally
+1️⃣ Clone the repository
 git clone https://github.com/yourusername/Foodie-calorie-finder.git
 cd Foodie-calorie-finder-main
+2️⃣ Activate virtual environment
 
-# 2. Activate the virtual environment
-# Windows
+Windows
+
 .\venv\Scripts\activate
 
-# Mac/Linux
-source venv/bin/activate
+Mac/Linux
 
-# 3. Install dependencies
+source venv/bin/activate
+3️⃣ Install dependencies
 pip install -r requirements.txt
 
-If you don’t have requirements.txt, make sure Django and pandas are installed:
+If no requirements file:
 
 pip install django pandas
-
-# 4. Apply Django migrations
+4️⃣ Run migrations
 python manage.py migrate
-
-# 5. Run the development server
+5️⃣ Start server
 python manage.py runserver
 
-# 6. Open in a web browser
-
-Go to:
+Open in browser:
 
 http://127.0.0.1:8000
-
-The home page will appear where you can search for food items.
-for example Egg white, egg yolk, mango, rice , banana
-
-Nutritional values and calorie burn estimates will be displayed.
-
-# Project Structure
+📁 Project Structure
 Foodie-calorie-finder-main/
 │
-├─ counter/                  # Django app
+├─ counter/
+│   ├─ templates/home.html
+│   ├─ clean_food_database.csv
+│   └─ views.py
 │
-├─ foodie/                   # Django project settings
+├─ foodie/
+├─ static/
+│   ├─ images/
+│   └─ style.css
 │
-├─ static/                   # Static files (CSS, images)
-│  ├─ images/
-│  ├─ style.css
-│
-├─ clean_food_database.csv    # Food nutrition data
-├─ manage.py                  # Django management file
+├─ manage.py
 ├─ README.md
+└─ .gitignore
